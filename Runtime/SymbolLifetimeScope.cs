@@ -19,6 +19,10 @@ namespace RinaSymbol {
             
             base.Configure(builder);
             
+            if (m_list is not null) {
+                m_list.Install(builder);
+            }
+            
             var symbol = transform.root.gameObject.GetComponentInChildren<ASymbol>();
 
             if (symbol is not null) {
