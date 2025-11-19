@@ -29,8 +29,8 @@ namespace RinaSymbol {
 
             var serializeInstaller = transform.root.gameObject.GetComponentsInChildren<IInstaller>();
 
-            if (serializeInstaller is not null || serializeInstaller.Length is not 0) {
-                serializeInstaller.ToList().ForEach(x => x.Install(builder));
+            if (serializeInstaller?.Length is not 0) {
+                serializeInstaller?.ToList().ForEach(x => x.Install(builder));
             }
             
         }
